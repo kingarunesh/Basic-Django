@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home</title>
+
+        <style>
+            body {
+                background-color: black;
+                color: #fff;
+                font-family: sans-serif;
+            }
+
+            hr {
+                margin: 6rem 0;
+            }
+
+            h1 {
+                color: orangered;
+                text-align: center;
+                border-bottom: 1px solid orangered;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>for loop tag</h1>
+
+        <ul>
+            {% for i in first_name %}
+            <li>{{i}}</li>
+            {% endfor %}
+        </ul>
+
+        <ul>
+            {% for name in names %}
+            <li>{{ forloop.counter }} : {{ name }}</li>
+            {% empty %}
+            <p>Empty List</p>
+            {% endfor %}
+        </ul>
+
+        <!---->
+
+        <ul>
+            {% for key, value in person.items %}
+            <li>{{key}} : {{value}}</li>
+            {% endfor %}
+        </ul>
+
+        <!---->
+
+        <ul>
+            {% comment %} {% for key, value in person.items %}
+            <!---->
+            {% if type(value) == list %}
+            <!---->
+            {% for i in value %}
+            <li>{{i}}</li>
+            {% endfor %}
+            <!---->
+            {% else %}
+            <li>{{key}} : {{value}}</li>
+            {% endif %}
+            <!---->
+            {% endfor %} {% endcomment %}
+        </ul>
+
+        <!---->
+
+        <!---->
+
+        <!---->
+
+        <hr />
+
+        <h1>if tag with condition</h1>
+
+        {% if a %}
+        <h3>Hello, Arunesh</h3>
+        {% endif %}
+
+        <!---->
+
+        {% if d %}
+        <h3>Hello, Arunesh</h3>
+        {% else %}
+        <h3>Empty</h3>
+        {% endif %}
+
+        <!---->
+
+        {% if a == "arunesh" %}
+        <h3>Correct</h3>
+        {% else %}
+        <h3>Empty</h3>
+        {% endif %}
+
+        <!---->
+
+        {% if a == "arunesh" and e == 12.21 %}
+        <h3>Okay</h3>
+        {% else %}
+        <h3>No</h3>
+        {% endif %}
+
+        <!---->
+
+        {% if a == "arunesh" or e == 12.21 %}
+        <h3>Okay</h3>
+        {% else %}
+        <h3>No</h3>
+        {% endif %}
+
+        <!---->
+
+        {% if not a == "arunesh" %}
+        <h3>Okay</h3>
+        {% else %}
+        <h3>No</h3>
+        {% endif %}
+
+        <!---->
+
+        {% comment %} {% if e > 10 %} {% endcomment %} {% if e >= 10 %}
+        <h3>Correct</h3>
+        {% else %}
+        <h3>No</h3>
+        {% endif %}
+
+        <!---->
+
+        {% if e < 10 %}
+        <h3>Correct</h3>
+        {% else %}
+        <h3>No</h3>
+        {% endif %}
+
+        <!---->
+
+        {% if first_name|length >= 5 %}
+        <h3>Hello, {{ first_name }}</h3>
+        {% else %}
+        <h3>Bye</h3>
+        {% endif %}
+
+        <!---->
+
+        {% if 10 < 5 %}
+        <h3>Correct</h3>
+        {% elif 10 >= 5 %}
+        <h3>10 >= 5</h3>
+        {% else %}
+        <h3>Invalid Number</h3>
+        {% endif %}
+
+        <hr />
+
+        <h1>Filter</h1>
+
+        <h3>{{a}}</h3>
+        <h3>{{a|capfirst}}</h3>
+        <h3>{{a|upper}}</h3>
+        <h3>{{b|lower}}</h3>
+        <h3>{{ d | default:"Empty" }}</h3>
+
+        <p>{{text}}</p>
+        <p>{{text | truncatewords:5 }}</p>
+        <p>{{text | truncatechars:50 }}</p>
+        <p>{{ text | upper | truncatewords:5 }}</p>
+        <p>{{ text | length }}</p>
+        <p>{{ text | slice:"20" }}</p>
+
+        <h3>{{ date }}</h3>
+        <h3>{{ date | date:"SHORT_DATE_FORMAT" }}</h3>
+        <h3>{{ date | time:"TIME_FORMAT" }}</h3>
+        <h3>{{ date | date:"D d M Y" }}</h3>
+        <h3>{{ date | time:"H:i" }}</h3>
+
+        <h3>{{ e | floatformat:3 }}</h3>
+        <h3>{{ i | floatformat:3 }}</h3>
+        <h3>{{ j | floatformat }}</h3>
+        <h3>{{ f | floatformat }}</h3>
+        <h3>{{ g | floatformat }}</h3>
+        <h3>{{ h | floatformat }}</h3>
+        <h3>{{ h | floatformat:-3 }}</h3>
+
+        <hr />
+
+        <h1>Variables</h1>
+
+        <h2>{{title}}</h2>
+        <ul>
+            <li>First Name : {{first_name}}</li>
+            <li>Last Name : {{last_name}}</li>
+            <li>Age : {{age}}</li>
+        </ul>
+
+        <h2>{{names}}</h2>
+        <p>{{names.1}}</p>
+
+        <h2>{{person}}</h2>
+        <p>{{person.first_name}}</p>
+        <p>{{person.gadgets}}</p>
+        <p>{{person.gadgets.0}}</p>
+    </body>
+</html>
