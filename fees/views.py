@@ -1,3 +1,13 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def fees(request):
+    """
+        fees page view
+    """
+
+    context = {
+        "title": "Fees Page"
+    }
+
+    return render(request=request, template_name="fees/fees.html", context=context)
