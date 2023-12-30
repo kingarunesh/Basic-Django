@@ -23,18 +23,26 @@
 {% endblock header %}
 
 <!---->
+<!---->
 
 {% block content %}
 
 <main>
-    <section><img src="{% static "course/images/a.jpg" %}" alt="Image" /></section>
+    <section>
+        <img src="{% static "course/images/a.jpg" %}" alt="Image" />
 
-    <h2>Lorem ipsum dolor sit.</h2>
+        <h2>Lorem ipsum dolor sit.</h2>
 
-    <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, obcaecati. Obcaecati, illo incidunt quasi eos hic nesciunt
-        delectus, quas esse porro praesentium ipsam numquam corrupti tenetur quos? Ducimus, quam ullam!
-    </p>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab, obcaecati. Obcaecati, illo incidunt quasi eos hic
+            nesciunt delectus, quas esse porro praesentium ipsam numquam corrupti tenetur quos? Ducimus, quam ullam!
+        </p>
+    </section>
+
+    <hr />
+
+    {% comment %} {% include "course/course-list.html" with first="Python" second="React.js" third="Next.js" %} {% endcomment %}
+    {% include "course/course-list.html" with first="Python" second="React.js" third="Next.js" only %}
 </main>
 
 {% endblock content %}

@@ -3,5 +3,5 @@ from .views import fees
 
 
 urlpatterns = [
-    path("fees/", view=fees)
+    path("fees/", view=fees, name="fees")
 ]
