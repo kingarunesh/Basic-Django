@@ -12,11 +12,15 @@ body {
     font-family: sans-serif;
 }
 
-h1 {
-    color: red;
-}
-
 img {
     width: 10rem;
     height: 10rem;
+}
+
+header {
+    background-color: dodgerblue;
+}
+
+footer {
+    background-color: rgb(79, 167, 255);
 }

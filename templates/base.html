@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{% static "styles/style.css" %}">
+        <title>{% block title %} Title {% endblock title %}</title>
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Posts</li>
+                <li>Products</li>
+                <li>Contact Us</li>
+                <li>About Us</li>
+            </ul>
+        </nav>
+
+        <!---->
+
+        {% block header %} {% endblock header %}
+
+        <!---->
+
+        {% block content %} {% endblock content %}
+
+        <!---->
+
+        <footer>{% block footer %} {% endblock footer %}</footer>
+    </body>
+</html>

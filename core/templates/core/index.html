@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+<!---->
+{% load static %}
+<!---->
+
+{% block title %} Home Page {% endblock title %}
+
+<!---->
+{% block header %}
+<header>
+    <h1>Home Page.</h1>
+</header>
+{% endblock header %}
+<!---->
+
+{% block content %}
+
+<main>
+    <section>
+        <img src="{% static "core/images/a.jpg" %}" alt="image" />
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis eos odio rem libero veniam, sequi itaque possimus
+            cum, dolorem ut, aliquam iure quis recusandae voluptates laudantium! Tenetur animi placeat corporis.
+        </p>
+    </section>
+</main>
+
+{% endblock content %}
+
+<!---->
+
+{% block footer %}
+<p>All Copyrights reversed 2024</p>
+{% endblock footer %}
+
+<!---->

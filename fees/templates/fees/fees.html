@@ -1,24 +1,42 @@
+{% extends "base.html" %}
+
+<!---->
+
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!---->
 
-        <link rel="stylesheet" href="{% static "fees/css/style.css" %}">
+{% block title %}Course Fees{% endblock title %}
 
-        <title>Document</title>
-    </head>
-    <body>
-        <h1>{{ title }}</h1>
+<!---->
 
-        <button onclick="demo()">Click Me</button>
+{% block header %}
+<header>
+    <h1>Course Fees</h1>
+</header>
+{% endblock header %}
 
-        <br />
+<!---->
 
-        <img src="{% static "fees/images/a.jpg" %}" alt="image" />
+{% block content %}
+<main>
+    <section>
+        <img src="{% static "fees/images/a.jpg" %}" alt="images">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad nostrum consequatur nobis eos, dolorum numquam laborum
+            tenetur, corrupti aut placeat tempore amet ipsum maiores ea accusamus rem sapiente veniam explicabo!
+        </p>
+    </section>
+</main>
+{% endblock content %}
 
-        <script src="{% static "fees/js/script.js" %}"></script>
-    </body>
-</html>
+<!---->
+
+{% block footer %}
+
+<p>All CopyRight &copy; reversed 2024</p>
+
+{% endblock footer %}
+
+<!---->
